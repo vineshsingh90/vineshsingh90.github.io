@@ -12,7 +12,7 @@ app.config(function($routeProvider){
 })
 
 app.controller('userCtrl', function ($scope, $http) {	
-    $http.get('http://jsonplaceholder.typicode.com/posts')
+    $http.get('../users.json')
 	.then(function (response){
 		$scope.users = response.data;
 		console.log($scope.users);
