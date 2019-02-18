@@ -51,6 +51,9 @@
 		  //console.log(sn+'--'+this.width+' '+ this.height + ''+ img.currentSrc);
 		  $("tbody").append("<tr><td>"+(sn+1)+"</td><td>"+img.currentSrc+"</td><td>"+this.width+"</td><td>"+ this.height +"</td></tr>")
 		};
+		img.onerror= function(){
+			alert('Wrong Url: '+img.currentSrc);
+		};
 		img.src = url;
 	}
 
